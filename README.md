@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Healthcare Provider Fraud Detection</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      margin: 2rem;
-      color: #333;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    ul {
-      margin-left: 1.5rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    code {
-      background-color: #f4f4f4;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .emoji {
-      font-size: 1.2rem;
-    }
-  </style>
 </head>
 <body>
 
