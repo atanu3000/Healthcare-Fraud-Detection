@@ -1,90 +1,126 @@
-🏥 Healthcare Provider Fraud Detection 🕵️‍♂️
-A complete data analysis and feature engineering pipeline for detecting fraudulent healthcare providers using real-world insurance claim datasets.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare Provider Fraud Detection</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 2rem;
+      color: #333;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .emoji {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
 
-🔍 Project Overview
-This project aims to identify potential fraud among healthcare providers using medical claims data. Leveraging structured datasets, we integrate, clean, and transform raw information from multiple sources to prepare it for modeling.
+  <h1 class="emoji">🏥 Healthcare Provider Fraud Detection 🕵️‍♂️</h1>
+  <p>A complete data analysis and feature engineering pipeline for detecting fraudulent healthcare providers using real-world insurance claim datasets.</p>
 
-Key components:
+  <div class="section">
+    <h2 class="emoji">🔍 Project Overview</h2>
+    <p>This project aims to identify <strong>potential fraud</strong> among healthcare providers using medical claims data. Leveraging structured datasets, we integrate, clean, and transform raw information from multiple sources to prepare it for modeling.</p>
+    <p><strong>Key Components:</strong></p>
+    <ul>
+      <li>Data cleaning & preprocessing</li>
+      <li>Handling missing values</li>
+      <li>Feature engineering</li>
+      <li>Exploratory Data Analysis (EDA)</li>
+      <li>Merging inpatient, outpatient, and beneficiary data</li>
+      <li>Preparing data for machine learning models</li>
+    </ul>
+  </div>
 
-Data cleaning & preprocessing
+  <div class="section">
+    <h2 class="emoji">📁 Dataset Structure</h2>
+    <p>The project uses the following datasets:</p>
+    <ul>
+      <li><code>Train.csv</code> & <code>Test.csv</code>: Core label data</li>
+      <li><code>Train_Beneficiarydata.csv</code> / <code>Test_Beneficiarydata.csv</code>: Patient-level data</li>
+      <li><code>Train_Inpatientdata.csv</code> / <code>Train_Outpatientdata.csv</code>: Medical claim details</li>
+    </ul>
+    <p>These datasets were merged and cleaned to form a robust base for fraud detection.</p>
+  </div>
 
-Handling missing values
+  <div class="section">
+    <h2 class="emoji">🛠️ Technologies Used</h2>
+    <ul>
+      <li><strong>Python</strong> (Pandas, NumPy, Seaborn, Matplotlib)</li>
+      <li><strong>Jupyter Notebook</strong></li>
+      <li><strong>Power BI</strong> (for optional visualization)</li>
+      <li><strong>SQL / DAX / Excel</strong> (supporting tools)</li>
+    </ul>
+  </div>
 
-Feature engineering
+  <div class="section">
+    <h2 class="emoji">🚀 Features & Work Done</h2>
+    <ul>
+      <li>✅ Merged and aligned multi-source datasets</li>
+      <li>✅ Created new features for provider-level fraud analysis</li>
+      <li>✅ Engineered time-based and code-based variables</li>
+      <li>✅ Visualized fraud patterns and claim distribution</li>
+      <li>✅ Prepared dataset for supervised learning</li>
+    </ul>
+  </div>
 
-Exploratory Data Analysis (EDA)
+  <div class="section">
+    <h2 class="emoji">📊 Visualization & Insights</h2>
+    <ul>
+      <li>Age group and gender patterns in fraud</li>
+      <li>Frequency of diagnosis/procedure codes</li>
+      <li>Hospital stay trends and anomalies</li>
+    </ul>
+    <p><em>All transformations were designed with modeling readiness and business interpretability in mind.</em></p>
+  </div>
 
-Merging inpatient, outpatient, and beneficiary data
+  <div class="section">
+    <h2 class="emoji">📌 How to Run</h2>
+    <ol>
+      <li>Clone the repo</li>
+      <li>Place the dataset files in the same directory</li>
+      <li>Open <code>Recent_Merge_Train_Test.ipynb</code> in Jupyter</li>
+      <li>Run each cell step-by-step</li>
+    </ol>
+  </div>
 
-Preparing data for machine learning models
+  <div class="section">
+    <h2 class="emoji">💡 Future Scope</h2>
+    <ul>
+      <li>Model training using classification algorithms</li>
+      <li>SHAP-based model interpretation</li>
+      <li>Deployment via Flask or Streamlit</li>
+    </ul>
+  </div>
 
-📁 Dataset Structure
-The project uses the following datasets:
+  <div class="section">
+    <h2 class="emoji">📚 Author</h2>
+    <p><strong>Ankit Ghosal</strong><br>MCA Candidate @ SVU (2026)<br>Passionate about data, business insights, ML and ethical AI.</p>
 
-Train.csv & Test.csv: Core label data
+    <h3 class="emoji">🤝 Co-Contributor</h3>
+    <p><strong>Atanu Paul</strong><br>MCA Candidate @ SVU (2026)<br>Passionate about data, web development, and business insights.</p>
+  </div>
 
-Train_Beneficiarydata.csv / Test_Beneficiarydata.csv: Patient-level data
+  <div class="section">
+    <p>⭐️ <strong>Star this repository</strong> if you found it helpful!<br>
+    📬 <strong>Feel free to contribute or open issues!</strong></p>
+  </div>
 
-Train_Inpatientdata.csv / Train_Outpatientdata.csv: Medical claim details
-
-These datasets were merged and cleaned to form a robust base for fraud detection.
-
-🛠️ Technologies Used
-Python (Pandas, NumPy, Seaborn, Matplotlib)
-
-Jupyter Notebook
-
-Power BI (for optional visualization)
-
-SQL / DAX / Excel (supporting tools)
-
-🚀 Features & Work Done
-✅ Merged and aligned multi-source datasets
-
-✅ Created new features for provider-level fraud analysis
-
-✅ Engineered time-based and code-based variables
-
-✅ Visualized fraud patterns and claim distribution
-
-✅ Prepared dataset for supervised learning
-
-📊 Visualization & Insights
-Age group and gender patterns in fraud
-
-Frequency of diagnosis/procedure codes
-
-Hospital stay trends and anomalies
-
-All transformations were designed with modeling readiness and business interpretability in mind.
-
-📌 How to Run
-Clone the repo
-
-Place the dataset files in the same directory
-
-Open Recent_Merge_Train_Test.ipynb in Jupyter
-
-Run each cell step-by-step
-
-💡 Future Scope
-Model training using classification algorithms
-
-SHAP-based model interpretation
-
-Deployment via Flask or Streamlit
-
-📚 Author
-Ankit Ghosal
-MCA Candidate @ SVU (2026) 
-Passionate about data, business insights, ML and ethical AI.
-
-📚 Co-Contributer:
-Atanu Paul
-MCA Candidate @ SVU (2026) 
-Passionate about data, Web Development, business insights.
-
-⭐️ Star this repository if you found it helpful!
-📬 Feel free to contribute or open issues!
-
-
+</body>
+</html>
