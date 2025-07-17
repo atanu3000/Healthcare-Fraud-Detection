@@ -29,6 +29,26 @@
     <p>These datasets were merged and cleaned to form a robust base for fraud detection.</p>
   </div>
 
+<br>
+<ul>
+      <li>Patient Age Distribution</li>
+</ul>
+<img width="967" height="371" alt="image_2025-07-18_02-38-53" src="https://github.com/user-attachments/assets/2239138f-af09-4653-b581-e07a2bf61848" />
+
+<br>
+<br>
+<ul>
+      <li>Best Performing Model Confusion Matrix & ROC AUC Score</li>
+</ul>
+<img width="961" height="455" alt="image_2025-07-18_02-39-27" src="https://github.com/user-attachments/assets/43b87433-c99b-40d0-8d24-c80b76d293f0" />
+
+<br>
+<br>
+<ul>
+      <li>Model Accuracy Chart wrt Accuracy, Precision, Recall, F1 Score, ROC AUC Score</li>
+</ul>
+<img width="570" height="360" alt="image_2025-07-18_02-40-52" src="https://github.com/user-attachments/assets/4832d5e9-bde2-4f3e-9868-af6ffa07b78f" />
+
   <div class="section">
     <h2 class="emoji">🛠️ Technologies Used</h2>
     <ul>
@@ -83,9 +103,11 @@
     <h2 class="emoji">📚 Author</h2>
     <p><strong>Ankit Ghosal</strong><br>MCA Candidate @ SVU (2026)<br>Passionate about data, business insights, ML and ethical AI.</p>
 
+  <!--
   <h3 class="emoji">🤝 Co-Contributor</h3>
-    <p><strong>Atanu Paul</strong><br>MCA Candidate @ SVU (2026)<br>Passionate about data, web development, and business insights.</p>
-  </div>
+  <p><strong>Atanu Paul</strong><br>MCA Candidate @ SVU (2026)<br>Passionate about data, web development, and business insights.</p>
+  -->
+</div>
 
   <div class="section">
     <p>⭐️ <strong>Star this repository</strong> if you found it helpful!<br>
