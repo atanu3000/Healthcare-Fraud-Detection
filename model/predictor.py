@@ -28,9 +28,10 @@ class ModelWrapper:
             X = np.array([[features[k] for k in features_order]])
 
             try:
-                probs = self.model.predict_proba(X)
-                prob = float(probs[0, 1]) if probs.shape[1] > 1 else float(probs[0, 0])
-                return prob >= 0.5, prob, self.version
+                probs = self.model.predict_proba(X)[0]
+                pred_class = int(np.argmax(probs))
+                confidence = float(np.max(probs))
+                return bool(pred_class), confidence, self.version
             except Exception:
                 pred = self.model.predict(X)
                 prob = float(pred[0])

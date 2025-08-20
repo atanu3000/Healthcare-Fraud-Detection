@@ -45,38 +45,8 @@ class PredictInput(BaseModel):
     ClmProcedureCode_5: Annotated[int, Field(..., ge=0, description="Claim procedure code 5")]
     ClmProcedureCode_6: Annotated[int, Field(..., ge=0, description="Claim procedure code 6")]
 
-    # Derived-friendly inputs (prefer these if available)
-    date_of_birth: Annotated[Optional[date], dict(description="YYYY-MM-DD, used to compute Age if provided")] = None
-    admission_date: Annotated[Optional[date], dict(description="YYYY-MM-DD for admission (to compute length of stay)")] = None
-    discharge_date: Annotated[Optional[date], dict(description="YYYY-MM-DD for discharge (to compute length of stay)")] = None
-    Age: Annotated[Optional[int], Field(..., ge=0, le=130, description="Age in years (optional if date_of_birth provided)")] = None
-    LengthOfStay: Annotated[Optional[int], Field(..., ge=0, description="Length of stay in days (optional if admission/discharge provided)")] = None
-
-    @classmethod
-    @model_validator(mode="after")
-    def compute_derived(cls, values):
-        dob = values.get("date_of_birth")
-        age = values.get("Age")
-        if dob and not age:
-            today = date.today()
-            years = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
-            values["Age"] = years
-
-        # only compute if LengthOfStay not provided
-        if values.get("LengthOfStay") is None:
-            adm = values.get("admission_date")
-            dis = values.get("discharge_date")
-            if adm and dis:
-                if dis < adm:
-                    raise ValueError("discharge_date must be >= admission_date")
-                values["LengthOfStay"] = (dis - adm).days
-            else:
-                values["LengthOfStay"] = 0
-
-        if values.get("Age") is None:
-            raise ValueError("Age must be provided, either directly or via date_of_birth")
-
-        return values
+    Age: Annotated[int, Field(..., ge=0, le=130, description="Age in years")]
+    LengthOfStay: Annotated[int, Field(..., ge=0, description="Length of stay in days")]
 
 class PredictionResponse(BaseModel):
     fraudulent: bool
