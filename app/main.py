@@ -10,7 +10,7 @@ app = FastAPI(title="Healthcare Fraud Detection API", version="1.0.1")
 # Allow requests from your frontend origin
 origins = [
     "http://localhost:8080",
-    "https://medguard-ai.vercel.app/",
+    "https://medguard-ai.vercel.app",
     # add more origins here
 ]
 
